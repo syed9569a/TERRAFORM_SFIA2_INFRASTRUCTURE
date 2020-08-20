@@ -18,7 +18,7 @@ resource "aws_security_group" "sg_web" {
     from_port   = var.outbound_port
     protocol    = "-1"
     to_port     = var.outbound_port
-    cidr_blocks = [var.ip_addresses]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
 }

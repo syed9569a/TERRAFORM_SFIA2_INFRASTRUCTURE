@@ -28,3 +28,8 @@ variable "enable_public_ip" {
 variable "vpc_security_group_ids" {
   description = "VPC Security Group IDs"
 }
+
+variable "user_data" {
+  description = "script to run when creating instance"
+  default = "data.template_file.init.rendered"
+}
